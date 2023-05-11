@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Collaborate from './components/collaborate/Collaborate';
+import Sdata from "./Sdata";
+
 
 function App() {
+  console.log(Sdata[1]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Collaborate
+    title={Sdata[0].title}
+    desc={Sdata[0].desc}
+    lname={Sdata[0].lname}
+    link={Sdata[0].link}
+     />
+
     </div>
   );
 }
